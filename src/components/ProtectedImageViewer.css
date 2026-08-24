@@ -1,0 +1,86 @@
+.protected-viewer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none; /* disable iOS long-press menu */
+}
+
+.protected-viewer__pages {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(15, 23, 42, 0.12);
+}
+
+.protected-viewer__page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none; /* blocks image save via long-press / right-click / drag */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.protected-viewer__watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+  opacity: 0.16;
+  transform: rotate(-28deg) scale(1.25);
+}
+
+.protected-viewer__watermark-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.protected-viewer__watermark span {
+  font-size: clamp(11px, 1.6vw, 15px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.protected-viewer--blurred .protected-viewer__pages {
+  filter: blur(22px);
+  transition: filter 0.15s ease;
+}
+
+.protected-viewer__blur-notice {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+@media print {
+  /* Discourage printing the page to a PDF via Ctrl+P; content is hidden. */
+  .protected-viewer {
+    display: none !important;
+  }
+  body::after {
+    content: "Printing is disabled for this controlled document.";
+    display: block;
+    text-align: center;
+    padding: 4rem 1rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+  }
+}

@@ -1,0 +1,100 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f1f5f9;
+}
+
+.home {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.home__intro h1 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin: 0 0 0.4rem;
+}
+
+.home__intro p {
+  color: #475569;
+  max-width: 60ch;
+  margin: 0 0 2rem;
+  line-height: 1.5;
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.sop-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.sop-card:hover {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+  transform: translateY(-2px);
+}
+
+.sop-card__badge {
+  align-self: flex-start;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.sop-card h2 {
+  font-size: 1.15rem;
+  margin: 0.3rem 0 0;
+  color: #0f172a;
+}
+
+.sop-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.sop-card__cta {
+  margin-top: 0.5rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.home__admin-link {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+}
+
+.home__admin-link a {
+  color: #64748b;
+}
+
+.page-footer {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  padding: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+}
