@@ -1,0 +1,74 @@
+.viewer-page {
+  flex: 1;
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3.5rem;
+}
+
+.viewer-page__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.viewer-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.viewer-page__code {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #475569;
+  background: #e9edf3;
+  padding: 0.24rem 0.65rem;
+  border-radius: 999px;
+}
+
+.viewer-page__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.3rem;
+  line-height: 1.4;
+}
+
+.viewer-page__meta {
+  color: #64748b;
+  font-size: 0.86rem;
+  margin: 0 0 1.5rem;
+}
+
+.viewer-page__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: #fdf6ec;
+  border: 1px solid #f0dfb8;
+  color: #7c5a12;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  border-radius: 10px;
+  padding: 0.9rem 1.05rem;
+  margin-bottom: 1.75rem;
+}
+
+.viewer-page__notice svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.viewer-page__disclaimer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  margin-top: 1.5rem;
+}

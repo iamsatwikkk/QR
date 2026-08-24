@@ -1,0 +1,135 @@
+.qr-page {
+  flex: 1;
+  max-width: 1040px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+
+.qr-page__eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 0.55rem;
+}
+
+.qr-page__intro h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+}
+
+.qr-page__intro p {
+  color: #526078;
+  max-width: 66ch;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  font-size: 0.94rem;
+}
+
+.qr-page__print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+}
+
+.qr-page__print-btn:hover {
+  background: #1e40af;
+}
+
+.qr-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+}
+
+.qr-card {
+  background: #fff;
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+  padding: 1.75rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.qr-card__code {
+  display: inline-flex;
+  padding: 0.75rem;
+  background: #fff;
+  border: 1px solid #eef1f5;
+  border-radius: 10px;
+  margin-bottom: 0.85rem;
+}
+
+.qr-card h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0.35rem 0 0.15rem;
+}
+
+.qr-card__instrument {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.qr-card__code-label {
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  margin: 0.4rem 0;
+}
+
+.qr-card__url {
+  color: #94a3b8;
+  font-size: 0.72rem;
+  word-break: break-all;
+  margin: 0 0 1rem;
+}
+
+.qr-card__download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  padding: 0.45rem 1rem;
+  border-radius: 7px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.qr-card__download:hover {
+  background: #e9edf3;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .qr-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .qr-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #333;
+  }
+}

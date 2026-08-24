@@ -1,0 +1,86 @@
+.protected-viewer {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.protected-viewer__pages {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e3e8ef;
+  box-shadow: 0 2px 16px rgba(15, 23, 42, 0.08);
+}
+
+.protected-viewer__page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.protected-viewer__watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+  opacity: 0.14;
+  transform: rotate(-28deg) scale(1.25);
+}
+
+.protected-viewer__watermark-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.protected-viewer__watermark span {
+  font-size: clamp(10px, 1.5vw, 14px);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #0f172a;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.protected-viewer--blurred .protected-viewer__pages {
+  filter: blur(22px);
+  transition: filter 0.15s ease;
+}
+
+.protected-viewer__blur-notice {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+@media print {
+  .protected-viewer {
+    display: none !important;
+  }
+  body::after {
+    content: "Printing is disabled for this controlled document.";
+    display: block;
+    text-align: center;
+    padding: 4rem 1rem;
+    font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
+  }
+}
